@@ -19,21 +19,36 @@ html {
 
 .main_content_block {
   display: flex;
-  height: 40rem;
 }
 
 .left_content_block {
   width: 60%;
-  max-height: 100%;
   display: flex;
   padding: 2rem .75rem 2rem 1.5rem;
 }
 
 .right_content_block {
   width: 40%;
-  max-height: 100%;
   display: flex;
   padding: 2rem 0 2rem .75rem;
+}
+
+.primary_background_color {
+  background-color: #c94c4c;
+}
+
+/* can the transition class actually be used? */
+
+.transition_background_color {
+  background-color: orange;
+}
+
+.secondary_color {
+  color: black;
+}
+
+.tertiary_color {
+  color: white;
 }
 
 /* header section */
@@ -44,11 +59,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #c94c4c;
   color: white;
 }
 
-.icon_section {
+.logo_section {
   display: flex;
   align-items: center;
   padding-left: 1.5rem;
@@ -78,7 +92,7 @@ nav ul li {
   background-color: lightgrey;
 }
 
-.banner img {
+.banner .left_content_block img {
   max-width: 100%;
   height: auto;
   display: block;
@@ -105,7 +119,11 @@ nav ul li {
   font-size: 1.25rem;
   width: 50%;
   padding: 0.5rem;
-  background-color: black;
   color: white;
   text-align: center;
+  transition: all 0.5s;
+}
+
+.banner .right_content_block p:hover {
+  background-color: orange;
 }
