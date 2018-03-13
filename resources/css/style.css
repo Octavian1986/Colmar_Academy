@@ -1,12 +1,39 @@
+/* To Do:
+
+change color palette
+change font-style
+banner image scaling doesn't work properly yet, how to maintain the original image ratio when resizing the page?
+when zooming in and out, item scaling changes drastically: how to maintain item scaling when zooming?
+set header as fixed nav bar?
+*/
+
+
 html {
   font-size: 16px;
   font-style: Helvetica, sans-serif;
-  background-color: white;
-  color: black;
 }
 
 .bold {
   font-weight: bold;
+}
+
+.main_content_block {
+  display: flex;
+  height: 40rem;
+}
+
+.left_content_block {
+  width: 60%;
+  max-height: 100%;
+  display: flex;
+  padding: 2rem .75rem 2rem 1.5rem;
+}
+
+.right_content_block {
+  width: 40%;
+  max-height: 100%;
+  display: flex;
+  padding: 2rem 0 2rem .75rem;
 }
 
 /* header section */
@@ -28,8 +55,6 @@ header {
   height: 2rem;
 }
 
-/* eventually adapt color palette */
-
 .colmar {
   color: black;
 }
@@ -37,8 +62,6 @@ header {
 .academy {
   color: white;
 }
-
-/* eventually adapt color palette */
 
 nav ul {
   display: flex;
@@ -49,4 +72,40 @@ nav ul li {
   margin-right: 1rem;
 }
 
-/* first content section */
+/* banner content section */
+
+.banner .left_content_block {
+  background-color: lightgrey;
+}
+
+.banner img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.banner .right_content_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: lightgrey;
+}
+
+.banner .right_content_block h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.banner .right_content_block h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.banner .right_content_block p {
+  font-size: 1.25rem;
+  width: 50%;
+  padding: 0.5rem;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
