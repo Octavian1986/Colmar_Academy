@@ -5,6 +5,9 @@ change font-style
 banner image scaling doesn't work properly yet, how to maintain the original image ratio when resizing the page?
 when zooming in and out, item scaling changes drastically: how to maintain item scaling when zooming?
 set header as fixed nav bar?
+add a border around the main container?
+in right info_section the bottom of the second small image should align with the bottom of the big info picture, scaling somewhat wrong.
+  -110% image size fits... why?
 */
 
 
@@ -17,7 +20,9 @@ html {
   font-weight: bold;
 }
 
-.main_content_block {
+.main_container {
+  width: 1024px;
+  margin: 0 auto;
   display: flex;
 }
 
@@ -92,14 +97,13 @@ nav ul li {
   background-color: lightgrey;
 }
 
-.banner .left_content_block img {
+.banner_img_container img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
 .banner .right_content_block {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: lightgrey;
@@ -115,7 +119,7 @@ nav ul li {
   margin-bottom: 1rem;
 }
 
-.banner .right_content_block p {
+.banner .right_content_block a {
   font-size: 1.25rem;
   width: 50%;
   padding: 0.5rem;
@@ -124,6 +128,106 @@ nav ul li {
   transition: all 0.5s;
 }
 
-.banner .right_content_block p:hover {
+.banner .right_content_block a:hover {
   background-color: orange;
 }
+
+/* information section */
+
+.info_section .left_content_block {
+  flex-direction: column;
+  background-color: darkgrey;
+}
+
+.main_info_img_container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.main_info_img_container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.main_info_text {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0 0 0;
+}
+
+.main_info_text h2 {
+  font-size: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+#mit_lastp {
+  padding-top: 1.5rem;
+}
+
+.info_section .right_content_block {
+  background-color: darkgrey;
+}
+
+.info_section_right {
+  display: flex;
+  flex-direction: column;
+}
+
+.info_item {
+  display: flex;
+}
+
+
+/* adding a transition value doesn't seem to work, why? */
+
+.info_item:hover {
+  width: 110%;
+}
+
+.info_item_img {
+  width: 35%;
+  overflow: hidden;
+}
+
+.info_item_img img {
+  max-width: 110%;
+  height: auto;
+  display: block;
+}
+
+.info_item_text {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1rem;
+}
+
+#info_item1, #info_item2 {
+  padding-bottom: 1rem;
+}
+
+#info_item2, #info_item3 {
+  padding-top: 1rem;
+}
+
+.info_item_text h3 {
+  font-size: 1.5rem;
+  margin-bottom: .5rem;
+}
+
+.info_item_text h4 {
+  margin-bottom: .5rem;
+}
+
+.info_item_text a {
+  color: #c94c4c;
+  transition: all 0.5s;
+}
+
+.info_item_text a:hover {
+  color: orange;
+}
+
+/* Start learning section */
