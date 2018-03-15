@@ -316,3 +316,17 @@ nav ul li:hover {
   font-size: 1rem;
   margin-bottom: .5rem;
 }
+
+/* thesis section */
+.thesis_section {
+  background-color: darkgrey;
+  display: flex;
+  flex-direction: column;
+}
+
+.thesis_section_heading h2 {
+  text-align: center;
+  font-size: 2rem;
+  padding: 2rem 0;
+  font-weight: bold;
+}
