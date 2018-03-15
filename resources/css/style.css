@@ -89,6 +89,11 @@ nav ul {
 
 nav ul li {
   margin-right: 1rem;
+  transition: all 0.5s;
+}
+
+nav ul li:hover {
+  color: orange;
 }
 
 /* banner content section */
@@ -178,7 +183,6 @@ nav ul li {
   display: flex;
 }
 
-
 /* adding a transition value doesn't seem to work, why? */
 
 .info_item:hover {
@@ -230,4 +234,4 @@ nav ul li {
   color: orange;
 }
 
-/* Start learning section */
+/* course section */
