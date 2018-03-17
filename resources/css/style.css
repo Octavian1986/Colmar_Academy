@@ -8,6 +8,7 @@ set header as fixed nav bar?
 add a border around the main container?
 in right info_section the bottom of the second small image should align with the bottom of the big info picture, scaling somewhat wrong.
   -110% image size fits... why?
+chaning wrong so far?
 */
 
 
@@ -98,7 +99,7 @@ nav ul li:hover {
 
 /* banner content section */
 
-.banner .left_content_block {
+.banner.left_content_block {
   background-color: lightgrey;
 }
 
@@ -108,24 +109,24 @@ nav ul li:hover {
   display: block;
 }
 
-.banner .right_content_block {
+.banner.right_content_block {
   flex-direction: column;
   justify-content: center;
   background-color: lightgrey;
 }
 
-.banner .right_content_block h1 {
+.banner.right_content_block h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   font-weight: bold;
 }
 
-.banner .right_content_block h4 {
+.banner.right_content_block h4 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
-.banner .right_content_block a {
+.banner.right_content_block a {
   font-size: 1.25rem;
   width: 50%;
   padding: 0.5rem;
@@ -134,13 +135,13 @@ nav ul li:hover {
   transition: all 0.5s;
 }
 
-.banner .right_content_block a:hover {
+.banner.right_content_block a:hover {
   background-color: orange;
 }
 
 /* information section */
 
-.info_section .left_content_block {
+.info_section.left_content_block {
   flex-direction: column;
   background-color: darkgrey;
 }
@@ -172,7 +173,7 @@ nav ul li:hover {
   padding-top: 1.5rem;
 }
 
-.info_section .right_content_block {
+.info_section.right_content_block {
   background-color: darkgrey;
 }
 
@@ -310,6 +311,7 @@ nav ul li:hover {
 .course_text_box h3 {
   font-size: 1.5rem;
   margin-bottom: .5rem;
+  font-weight: bold;
 }
 
 .course_text_box h4 {
@@ -324,9 +326,95 @@ nav ul li:hover {
   flex-direction: column;
 }
 
+.thesis_content_box {
+  display: flex;
+  width: 100%;
+}
+
 .thesis_section_heading h2 {
   text-align: center;
   font-size: 2rem;
-  padding: 2rem 0;
+  padding: 2rem 0 0 0;
   font-weight: bold;
+}
+
+.thesis.left_content_block {
+  flex-direction: column;
+}
+
+.thesis.right_content_block {
+  flex-direction: column;
+}
+
+.thesis_video_box {
+  width: 100%;
+  overflow: hidden;
+}
+
+.thesis_video_box video {
+  max-width: 100%;
+  display: block;
+}
+
+.thesis_main_text_box h3 {
+  padding: 1.5rem 0 .5rem 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.thesis {
+  display: flex;
+}
+
+.thesis_image_box {
+  width: 35%;
+  overflow: hidden;
+}
+
+.thesis_image_box img {
+  max-width: 110%;
+  height: auto;
+  display: block;
+}
+
+.thesis_text_box {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1rem;
+}
+
+
+#thesis1 {
+  padding-bottom: 2rem;
+}
+
+.thesis_text_box h3 {
+  font-size: 1.5rem;
+  margin-bottom: .5rem;
+  font-weight: bold;
+}
+
+.thesis_text_box h4 {
+  margin-bottom: .5rem;
+}
+
+footer {
+  display: flex;
+  background-color: lightgrey;
+  justify-content: space-between;
+  height: 4rem;
+}
+
+footer p {
+  padding: 1rem 0 0 1.5rem;
+}
+
+footer ul {
+  display: flex;
+}
+
+footer ul li {
+  padding: 1.5rem 1.5rem 0 0;
 }
