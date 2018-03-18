@@ -86,13 +86,16 @@ header {
 
   .main_container {
     width: 100%;
+    flex-direction: column;
     min-width: 320px;
   }
 
   .mobile_nav_section {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
+    height: 4rem;
   }
 }
 
@@ -158,6 +161,64 @@ nav ul li:hover {
 
 .banner.right_content_block a:hover {
   background-color: orange;
+}
+
+.mobile.banner.right_content_block{
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+
+  .banner.left_content_block {
+    width: 100%;
+    padding: 0 0 0 0;
+  }
+
+  .banner_img_container {
+    width: 100%;
+  }
+
+  .banner_img_container img {
+    max-width: 100%;
+  }
+
+  .desktop.banner.right_content_block {
+    display: none;
+  }
+
+  .mobile.banner.right_content_block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 2rem 0;
+  }
+
+  .banner_img_container {
+    width: 100%;
+  }
+
+  .banner.right_content_block h1 {
+    font-size: 2.5rem;
+    padding: 2rem 0 2rem 1rem;
+    margin: 0;
+    font-weight: bold;
+  }
+
+  .banner.right_content_block h4 {
+    font-size: 1.5rem;
+    padding: 0 0 1.5rem 1rem;
+    margin: 0;
+  }
+
+  .banner.right_content_block a {
+    font-size: 1.25rem;
+    width: 86%;
+    padding: 0.5rem;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    transition: all 0.5s;
+  }
 }
 
 /* information section */
@@ -253,6 +314,57 @@ nav ul li:hover {
 
 .info_item_text a:hover {
   color: orange;
+}
+
+.mobile.info_item_img {
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+
+  .info_section.left_content_block {
+    display: none;
+  }
+
+  .info_section.right_content_block {
+    width: 100%;
+    padding: 0;
+  }
+
+  .info_item {
+    flex-direction: column;
+    padding: 1rem 1rem;
+  }
+
+  .info_item_img {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .info_item_img img {
+    max-width: 100%;
+  }
+
+  .desktop.info_item_img {
+    display: none;
+  }
+
+  .mobile.info_item_img {
+    display: block;
+  }
+
+  .info_item_text {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .info_item_text h3 {
+    padding-top: 1rem;
+  }
+
 }
 
 /* course section */
