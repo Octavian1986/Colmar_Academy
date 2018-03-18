@@ -401,7 +401,7 @@ nav ul li:hover {
   /* how do i determine the correct width needed? */
 
   background-color: white;
-  transition: all 0.5s;
+  transition: color 0.5s;
 }
 
 .course:hover {
@@ -451,6 +451,41 @@ nav ul li:hover {
   font-size: 1rem;
   margin-bottom: .5rem;
 }
+
+@media only screen and (max-width: 480px) {
+
+  .course-image_box {
+    display: none;
+  }
+
+  .course_section_courses_box {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 0 1.5rem 0;
+  }
+
+  #course1, #course2, #course3, #course4, #course5, #course6 {
+    padding: 1rem 1rem 1.5rem 1rem;
+    margin: 0 auto .5rem auto;
+    width: 85%;
+    background-color: darkgrey;
+  }
+
+  .course_text_box {
+    padding: 0;
+    margin: 0;
+  }
+
+  .course_text_box h4, .course_text_box p {
+    display: none;
+  }
+
+  .course_text_box h3 {
+    padding: 0;
+    margin: 0;
+  }
+}
+
 
 /* thesis section */
 .thesis_section {
@@ -533,6 +568,39 @@ nav ul li:hover {
   margin-bottom: .5rem;
 }
 
+@media only screen and (max-width: 480px) {
+
+  .thesis_section_heading h2 {
+    padding: 2rem 0 1rem 0;
+    font-weight: bold;
+  }
+
+  .thesis.left_content_block {
+    width: 100%;
+    padding: 0;
+  }
+
+  .thesis.right_content_block {
+    display: none;
+  }
+
+  .thesis_main_text_box {
+    display: none;
+  }
+
+  .thesis_video_box {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .thesis_video_box video {
+    max-width: 100%;
+  }
+
+}
+
+/* footer section */
+
 footer {
   display: flex;
   background-color: lightgrey;
@@ -550,4 +618,20 @@ footer ul {
 
 footer ul li {
   padding: 1.5rem 1.5rem 0 0;
+}
+
+@media only screen and (max-width: 480px) {
+
+  footer {
+    height: auto;
+  }
+
+  footer p {
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  footer ul {
+    display: none;
+  }
 }
