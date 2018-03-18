@@ -68,11 +68,32 @@ header {
   color: white;
 }
 
-.logo_section {
+.desktop_logo_section {
   display: flex;
   align-items: center;
   padding-left: 1.5rem;
   height: 2rem;
+}
+
+.mobile_nav_section {
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+  .desktop_logo_section, .desktop_nav_section {
+    display: none;
+  }
+
+  .main_container {
+    width: 100%;
+    min-width: 320px;
+  }
+
+  .mobile_nav_section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 
 .colmar {
