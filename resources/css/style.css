@@ -2,7 +2,10 @@
 
 in right info_section the bottom of the second small image should align with the bottom of the big info picture, scaling somewhat wrong.
   -110% image size fits... why?
-chaning wrong so far?
+
+changing selectors (chaining partially wrong?)
+
+add a favicon
 
 */
 
@@ -10,6 +13,7 @@ chaning wrong so far?
 html {
   font-size: 16px;
   font-family: 'Quattrocento', serif;
+
 /* Alternative font styles:
 
 font-family: 'Playfair Display', serif;
@@ -21,10 +25,18 @@ font-family: 'Fanwood Text', serif;
 */
 }
 
-
-
 .bold {
   font-weight: bold;
+}
+
+.border {
+  border: 1px solid black;
+}
+
+.borderlrb {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .main_container {
@@ -97,7 +109,6 @@ header {
   justify-content: space-between;
   align-items: center;
   z-index: 5;
-  border: 1px solid black;
 }
 
 .desktop_logo_section {
@@ -150,7 +161,6 @@ nav ul li:hover {
 .banner.main_container {
   position: relative;
   top: 4rem;
-  border: 1px solid black;
 }
 
 .banner_img_container img {
@@ -250,9 +260,6 @@ nav ul li:hover {
 .info_section.main_container {
   position: relative;
   top: 4rem;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
 }
 
 .info_section.left_content_block {
@@ -402,9 +409,6 @@ nav ul li:hover {
 .course_section {
   position: relative;
   top: 4rem;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
 }
 
 .course_section {
@@ -436,7 +440,7 @@ nav ul li:hover {
   border: 1px solid black;
 
   /* 30.9% seems to be according to specs */
-  /* how do i determine the correct width needed? */
+  /* how to determine the correct width needed? */
 
   background-color: white;
   transition: color 0.5s;
@@ -531,9 +535,6 @@ nav ul li:hover {
   flex-direction: column;
   position: relative;
   top: 4rem;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
 }
 
 .thesis_content_box {
@@ -659,9 +660,6 @@ footer {
   height: 4rem;
   position: relative;
   top: 4rem;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
 }
 
 footer p {
@@ -673,7 +671,35 @@ footer ul {
 }
 
 footer ul li {
-  padding: 1.5rem 1.5rem 0 0;
+  padding: 1rem 1.5rem 0 0;
+}
+
+#fa4 {
+  padding: 0 2.5rem 0 0;
+}
+
+footer ul li {
+  transition: all 0.5s;
+}
+
+footer ul li a:link {
+  color: white;
+}
+
+footer ul li a:visited {
+  color: white;
+}
+
+footer ul li a:hover {
+  color: orange;
+}
+
+footer ul li a {
+  transition: all 0.5s;
+}
+
+#f1:hover, #f2:hover {
+  color: orange;
 }
 
 @media only screen and (max-width: 480px) {
