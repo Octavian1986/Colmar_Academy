@@ -1,21 +1,27 @@
 /* To Do:
 
-change color palette
-change font-style
-banner image scaling doesn't work properly yet, how to maintain the original image ratio when resizing the page?
-when zooming in and out, item scaling changes drastically: how to maintain item scaling when zooming?
-set header as fixed nav bar?
-add a border around the main container?
 in right info_section the bottom of the second small image should align with the bottom of the big info picture, scaling somewhat wrong.
   -110% image size fits... why?
 chaning wrong so far?
+
 */
 
 
 html {
   font-size: 16px;
-  font-style: Helvetica, sans-serif;
+  font-family: 'Quattrocento', serif;
+/* Alternative font styles:
+
+font-family: 'Playfair Display', serif;
+font-family: 'Fauna One', serif;
+
+font-family: 'Quattrocento', serif;
+font-family: 'Fanwood Text', serif;
+
+*/
 }
+
+
 
 .bold {
   font-weight: bold;
@@ -39,33 +45,59 @@ html {
   padding: 2rem 0 2rem .75rem;
 }
 
+/* color definitions */
+
 .primary_background_color {
+  background-color: #034f84;
+}
+
+/*alernatives:
   background-color: #c94c4c;
+
+  background-color: #d6cbd3;
+  background-color: #eca1a6;
+  background-color: #bdcebe;
+
+  background-color: #f7cac9;
+  background-color: #f7786b;
+  background-color: #034f84;
+  background-color: #92a8d1;
+
+*/
+
+.secondary_background_color {
+  background-color: #d6cbd3;
+
 }
 
-/* can the transition class actually be used? */
-
-.transition_background_color {
-  background-color: orange;
+.tertiary_background_color {
+  background-color: darkgrey;
 }
 
-.secondary_color {
+.primary_font_color {
   color: black;
 }
 
-.tertiary_color {
+.secondary_font_color {
   color: white;
+}
+
+.tertiary_font_color {
+  color: darkblue;
 }
 
 /* header section */
 
 header {
   height: 4rem;
-  width: 100%;
   display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
   justify-content: space-between;
   align-items: center;
-  color: white;
+  z-index: 5;
+  border: 1px solid black;
 }
 
 .desktop_logo_section {
@@ -99,14 +131,6 @@ header {
   }
 }
 
-.colmar {
-  color: black;
-}
-
-.academy {
-  color: white;
-}
-
 nav ul {
   display: flex;
   padding-right: 0.5rem;
@@ -123,8 +147,10 @@ nav ul li:hover {
 
 /* banner content section */
 
-.banner.left_content_block {
-  background-color: lightgrey;
+.banner.main_container {
+  position: relative;
+  top: 4rem;
+  border: 1px solid black;
 }
 
 .banner_img_container img {
@@ -136,7 +162,6 @@ nav ul li:hover {
 .banner.right_content_block {
   flex-direction: column;
   justify-content: center;
-  background-color: lightgrey;
 }
 
 .banner.right_content_block h1 {
@@ -215,7 +240,6 @@ nav ul li:hover {
     width: 86%;
     padding: 0.5rem;
     margin: 0 auto;
-    color: white;
     text-align: center;
     transition: all 0.5s;
   }
@@ -223,9 +247,16 @@ nav ul li:hover {
 
 /* information section */
 
+.info_section.main_container {
+  position: relative;
+  top: 4rem;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
 .info_section.left_content_block {
   flex-direction: column;
-  background-color: darkgrey;
 }
 
 .main_info_img_container {
@@ -253,10 +284,6 @@ nav ul li:hover {
 
 #mit_lastp {
   padding-top: 1.5rem;
-}
-
-.info_section.right_content_block {
-  background-color: darkgrey;
 }
 
 .info_section_right {
@@ -297,6 +324,10 @@ nav ul li:hover {
   padding-top: 1rem;
 }
 
+#info_item1, #info_item2 {
+  border-bottom: 1px solid black;
+}
+
 .info_item_text h3 {
   font-size: 1.5rem;
   margin-bottom: .5rem;
@@ -308,7 +339,6 @@ nav ul li:hover {
 }
 
 .info_item_text a {
-  color: #c94c4c;
   transition: all 0.5s;
 }
 
@@ -370,7 +400,14 @@ nav ul li:hover {
 /* course section */
 
 .course_section {
-  background-color: lightgrey;
+  position: relative;
+  top: 4rem;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.course_section {
   display: flex;
   flex-direction: column;
 }
@@ -396,6 +433,7 @@ nav ul li:hover {
   display: flex;
   flex-direction: column;
   width: 30%;
+  border: 1px solid black;
 
   /* 30.9% seems to be according to specs */
   /* how do i determine the correct width needed? */
@@ -489,9 +527,13 @@ nav ul li:hover {
 
 /* thesis section */
 .thesis_section {
-  background-color: darkgrey;
   display: flex;
   flex-direction: column;
+  position: relative;
+  top: 4rem;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .thesis_content_box {
@@ -551,11 +593,17 @@ nav ul li:hover {
   flex-direction: column;
   justify-content: center;
   padding-left: 1rem;
+  transition: all 0.5s;
 }
 
 
 #thesis1 {
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid black;
+}
+
+#thesis2 {
+  padding-top: 1rem;
 }
 
 .thesis_text_box h3 {
@@ -566,6 +614,10 @@ nav ul li:hover {
 
 .thesis_text_box h4 {
   margin-bottom: .5rem;
+}
+
+.thesis_text_box:hover {
+  color: orange;
 }
 
 @media only screen and (max-width: 480px) {
@@ -603,9 +655,13 @@ nav ul li:hover {
 
 footer {
   display: flex;
-  background-color: lightgrey;
   justify-content: space-between;
   height: 4rem;
+  position: relative;
+  top: 4rem;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 footer p {
