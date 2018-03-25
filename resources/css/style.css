@@ -1,42 +1,7 @@
-/* To Do:
-
-in right info_section the bottom of the second small image should align with the bottom of the big info picture, scaling somewhat wrong.
-  -110% image size fits... why?
-
-changing selectors (chaining partially wrong?)
-
-add a favicon
-
-*/
-
 
 html {
   font-size: 16px;
   font-family: 'Quattrocento', serif;
-
-/* Alternative font styles:
-
-font-family: 'Playfair Display', serif;
-font-family: 'Fauna One', serif;
-
-font-family: 'Quattrocento', serif;
-font-family: 'Fanwood Text', serif;
-
-*/
-}
-
-.bold {
-  font-weight: bold;
-}
-
-.border {
-  border: 1px solid black;
-}
-
-.borderlrb {
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
 }
 
 .main_container {
@@ -57,13 +22,27 @@ font-family: 'Fanwood Text', serif;
   padding: 2rem 0 2rem .75rem;
 }
 
+.bold {
+  font-weight: bold;
+}
+
+.border {
+  border: 1px solid black;
+}
+
+.borderlrb {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
 /* color definitions */
 
 .primary_background_color {
   background-color: #034f84;
 }
 
-/*alernatives:
+/*alternative color choices:
   background-color: #c94c4c;
 
   background-color: #d6cbd3;
@@ -140,6 +119,7 @@ header {
     width: 100%;
     height: 4rem;
   }
+
 }
 
 nav ul {
@@ -302,8 +282,6 @@ nav ul li:hover {
   display: flex;
 }
 
-/* adding a transition value for hovering when selection info_items doesn't seem to work, why? */
-
 .info_item_img {
   width: 35%;
   overflow: hidden;
@@ -438,17 +416,12 @@ nav ul li:hover {
   flex-direction: column;
   width: 30%;
   border: 1px solid black;
-
-  /* 30.9% seems to be according to specs */
-  /* how to determine the correct width needed? */
-
   background-color: white;
   transition: color 0.5s;
 }
 
 .course:hover {
   color: orange;
-  /* ideally adding a border without moving the elements when hovering */
 }
 
 #course1, #course2, #course4, #course5 {
@@ -528,10 +501,9 @@ nav ul li:hover {
   }
 }
 
-
 /* thesis section */
+
 .thesis_section {
-  display: flex;
   flex-direction: column;
   position: relative;
   top: 4rem;
@@ -596,7 +568,6 @@ nav ul li:hover {
   padding-left: 1rem;
   transition: all 0.5s;
 }
-
 
 #thesis1 {
   padding-bottom: 1rem;
